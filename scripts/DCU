@@ -1,0 +1,12 @@
+#FIrst find the application/exe
+$DCU = "C:\Program Files\Dell\CommandUpdate\dcu-cli.exe"
+#Next, initiate a scan that checks against Dells available update catalog 
+& $DCU /scan
+
+#Install CRITICAL updates, reboot if necessary 
+
+#Bitlocker needs to be suspended for most modern Dell laptops on a domain
+& $DCU /applyUpdates `
+    -updateType=bios,firmware,driver `
+    -autoSuspendBitLocker=enable
+
