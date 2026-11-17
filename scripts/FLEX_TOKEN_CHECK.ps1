@@ -1,5 +1,5 @@
 ﻿#name var
-$varName = "ADSKFLEX_LICENSE_FILE"
+$varName = "FLEX_LICENSE_FILE"
 #run as current user which should be system if running from an RMM
 $currentUser = (Get-CimInstance Win32_ComputerSystem).UserName
 
